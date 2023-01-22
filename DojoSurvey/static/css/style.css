@@ -1,0 +1,49 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.btn{
+    border: 2px soild black ;
+    border-radius:0%;
+    margin-left: 250px;
+    background-color: cadetblue;
+    color: antiquewhite;
+    box-shadow: 2px 2px 0px 0px  black;
+    width: 50px;
+    height: 25px;
+}
+.continer{
+    width: 350px;
+    height: 250px;
+    margin: 100px auto;
+    border: 2px solid black;
+    border-radius: 0%;
+}
+.input{
+    border: 2px solid black;
+    border-radius: 0%;
+    width: 150px;
+    height: 25px;
+}
+.sub-continer{
+    width: 300px;
+    height: 218px;
+    margin: 20px auto;
+}
+
+.sub-continer div{
+    margin-bottom: 10px;
+}
+
+.ml-20{
+    margin-left: 25px;
+}
+.ml-40{
+    margin-left: 45px;
+}
+.result{
+    width: fit-content;
+    height: fit-content;
+    margin: 100px auto;
+    border: 2px solid black;
+}

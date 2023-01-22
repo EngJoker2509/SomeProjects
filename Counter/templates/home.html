@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="margin: 0px;padding: 0px;">
+    <div style="height: 625px; width: 1310px; ">
+        <div style="margin: 0px auto; height: 250px; width: 325px;">
+            <h1 style="margin: 0px;">Counter</h1>
+            <h1>{{request.session.counter}}</h1>
+            <form action="destroy_session" method="post">
+                {% csrf_token %}
+                <button type="submit"
+                    style="border: 2px solid black ;background-color: blue; margin-bottom: 20px;">Clear</button>
+            </form>
+            <form action="increment_by_two" method="post">
+                {% csrf_token %}
+                <button type="submit" style="border: 2px solid black ;background-color: blue;"> Increment By Two
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

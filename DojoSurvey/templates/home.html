@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dojo Survey</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/script.js' %}"></script>
+</head>
+
+<body>
+    <div class="continer">
+        <form action="/result" method="post">
+            {% csrf_token %}
+            <div class="sub-continer">
+                <div>
+                    <label>First Name : </label>
+                    <input type="text" name="first_name" placeholder="Your name..." class="input ml-40">
+                </div>
+
+                <div>
+                    <label>Dojo Location : </label>
+                    <select class="input ml-20" name="dojo_location">
+                        <option>Ramallah</option>
+                        <option>Nablus</option>
+                        <option>Jenin</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Favorite Language : </label>
+                    <select class="input" name="favorite_language">
+                        <option>javaScript</option>
+                        <option>Python</option>
+                        <option>CSharp</option>
+                    </select>
+                </div>
+                <div>
+                    <p><strong> Comment (Optional) : </strong></p>
+                    <textarea name="comment" cols="20" rows="3" style="margin-top: 10px;"></textarea>
+                </div>
+
+                <div>
+                    <input type="submit" value="Button" class="btn">
+                </div>
+            </div>
+        </form>
+
+</body>
+</div>
+
+</html>

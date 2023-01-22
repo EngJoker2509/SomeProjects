@@ -1,0 +1,20 @@
+
+.title{
+    border: 2px solid black;
+    border-radius:0%;
+    height: fit-content;
+    width: fit-content;
+    margin:0px auto 25px auto;
+}
+.content{
+    border: 2px solid black;
+    border-radius:0%;
+    height: fit-content;
+    width: 500px;
+    margin:0px auto ;
+}
+.title h4,.content h1{
+    text-align:center;
+    margin-top: 0px;
+    font-style: italic;
+}

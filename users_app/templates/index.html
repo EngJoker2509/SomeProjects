@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Users with Templates</title>
+</head>
+
+<body>
+    <h1 class="center">All The Users</h1>
+    <table>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Age
+            </th>
+        </tr>
+        {% for i in all_the_users %}
+        <tr>
+            <td>{{ i.id }}</td>
+            <td>{{ i.first_name }}</td>
+            <td>{{ i.email_address }}</td>
+            <td>{{ i.age }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <hr style="font-size: x-large;">
+    <h1 class="center">Add User</h1>
+    <form action="/fetch_date" method="post">
+        {% csrf_token %}
+        <div class="form">
+            <div>
+                <label for="first_name" class="labels">First Name :</label>
+                <input type="text" name="first_name" class="input">
+
+                <label for="last_name" class="labels">Last Name :</label>
+                <input type="text" name="last_name" class="input">
+
+            </div>
+            <div>
+                <label for="email" class="labels">Email :</label>
+                <input type="email" name="email" class="input">
+
+                <label for="age" class="labels">Age :</label>
+                <input type="number" name="age" class="input">
+            </div>
+            <button type="submit" class="btn">Add</button>
+        </div>
+    </form>
+</body>
+
+</html>

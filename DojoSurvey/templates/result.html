@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Dojo Survey Index</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <script src="{% static 'js/script.js' %}"></script>
+    </head>
+<body>
+    <div class="result">
+        <h1>Submitted Info</h1>
+        <div>
+            <label for="name">Name :</label>
+            <label>{{first_name}}</label>
+        </div>
+        <div>
+            <label for="name">Favorite Language :</label>
+            <strong>
+                {{favorite_language}}
+            </strong>
+        </div>
+        <div>
+            <label for="name">Dojo Location :</label>
+            <strong>
+                {{dojo_location}}
+            </strong>
+        </div>
+        <div>
+            <label for="name">Comment :</label>
+            <strong>
+                {{comment}}
+            </strong>
+        </div>
+    </div>
+</body>
+
+</html>
